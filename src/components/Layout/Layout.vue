@@ -3,7 +3,9 @@
     <Navigation></Navigation>
     <div class="app-content">
       <Header />
-      <router-view />
+      <div class="router-container">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +39,12 @@ export default {
     header {
       height: 60px;
       border-bottom: 1px solid #ebeff2;
+    }
+
+    .router-container {
+      width: 100%;
+      height: calc(100vh - 60px);
+      background: #e5e5e5;
     }
   }
 }

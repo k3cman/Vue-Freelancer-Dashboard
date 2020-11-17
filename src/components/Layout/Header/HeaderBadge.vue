@@ -30,8 +30,8 @@ export default {
   align-items: center;
   img {
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
   span {
     margin-left: 10px;
