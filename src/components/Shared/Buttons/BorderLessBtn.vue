@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button @click="$router.push(route)">
     <slot name="icon"> </slot>
     <span>
       <slot></slot>
@@ -9,6 +9,12 @@
 <script>
 export default {
   name: "BorderLessBtn",
+  props: {
+    route: {
+      type: String,
+      default: "/",
+    },
+  },
 };
 </script>
 

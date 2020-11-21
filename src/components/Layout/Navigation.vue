@@ -5,7 +5,7 @@
         <Logo />
       </div>
       <div class="navigation">
-        <border-less-btn>
+        <border-less-btn :route="'tracker'">
           <template v-slot:icon>
             <icon-base>
               <icon-clock />
@@ -21,7 +21,7 @@
           </template>
           Dashboard
         </border-less-btn>
-        <border-less-btn>
+        <border-less-btn :route="'todo'">
           <template v-slot:icon>
             <icon-base>
               <icon-task />
@@ -30,7 +30,7 @@
           Todo
         </border-less-btn>
         <div class="divider"></div>
-        <border-less-btn>
+        <border-less-btn :route="'clients'">
           <template v-slot:icon>
             <icon-base>
               <icon-client />
@@ -38,7 +38,7 @@
           </template>
           Clients
         </border-less-btn>
-        <border-less-btn>
+        <border-less-btn :route="'projects'">
           <template v-slot:icon>
             <icon-base>
               <icon-projects />
@@ -46,7 +46,7 @@
           </template>
           Projects
         </border-less-btn>
-        <border-less-btn>
+        <border-less-btn :route="'invoices'">
           <template v-slot:icon>
             <icon-base>
               <icon-dollar />
@@ -55,7 +55,7 @@
           Invoices
         </border-less-btn>
         <div class="divider"></div>
-        <border-less-btn>
+        <border-less-btn :route="'settings'">
           <template v-slot:icon>
             <icon-base>
               <icon-gear />
