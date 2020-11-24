@@ -11,7 +11,7 @@ const routes = [
   {
     path: "/tracker",
     name: "Tracker",
-    component: () => import("../views/Tracker.vue"),
+    component: () => import("../views/Tracker/Tracker.vue"),
   },
   {
     path: "/todo",
