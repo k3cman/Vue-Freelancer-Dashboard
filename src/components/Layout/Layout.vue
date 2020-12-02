@@ -45,6 +45,7 @@ export default {
       width: 100%;
       height: calc(100vh - 60px);
       background: #e5e5e5;
+      padding: 33px;
     }
   }
 }

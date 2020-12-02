@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Dashboard from "../views/Dashboard.vue";
-import NotFound from "../views/NotFound.vue";
+import Dashboard from "../views/Dashboard/Dashboard.vue";
+import NotFound from "../components/Shared/NotFound/NotFound.vue";
 
 const routes = [
   {
@@ -16,27 +16,27 @@ const routes = [
   {
     path: "/todo",
     name: "Todo",
-    component: () => import("../views/Todo.vue"),
+    component: () => import("../views/Todo/Todo.vue"),
   },
   {
     path: "/clients",
     name: "Clients",
-    component: () => import("../views/Clients.vue"),
+    component: () => import("../views/Clients/Clients.vue"),
   },
   {
     path: "/projects",
     name: "Projects",
-    component: () => import("../views/Projects.vue"),
+    component: () => import("../views/Projects/Projects.vue"),
   },
   {
     path: "/invoices",
     name: "Invoices",
-    component: () => import("../views/Invoices.vue"),
+    component: () => import("../views/Invoices/Invoices.vue"),
   },
   {
     path: "/settings",
     name: "Settings",
-    component: () => import("../views/Settings.vue"),
+    component: () => import("../views/Settings/Settings.vue"),
   },
   { path: "/:pathMatch(.*)*", name: "not-found", component: NotFound },
 ];
