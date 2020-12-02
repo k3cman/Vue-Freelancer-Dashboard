@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ViewWrapper from "../components/Layout/ViewWrapper/ViewWrapper.vue";
+import ViewWrapper from '../../components/Layout/ViewWrapper/ViewWrapper'
 
 export default {
   name: "Dashboard",
