@@ -14,6 +14,16 @@
       </div>
     </div>
   </div>
+  <button @click="test()">TEST</button>
+  <div class="span" v-for="track in allTracks" :key="track.id">
+    {{track.name}}
+    {{track.startTime}}
+  </div>
+<!--  <div v-if="trackState.length">-->
+<!--    <span v-for="track1 in trackState" :key="track1.id">-->
+<!--      {{track1.name}}-->
+<!--    </span>-->
+<!--  </div>-->
 </template>
 
 <script>
@@ -21,12 +31,34 @@ import moment from "moment";
 import EntryRow from "@/components/Shared/Entries/EntryRow";
 import EntryGroupHeader from "@/components/Shared/Entries/EntryGroupHeader";
 import NewEntry from '@/components/Shared/Entries/NewEntry'
+import { store} from '../../store'
+import { mapGetters, mapState } from 'vuex';
+import { TimeStamp } from '@/services/db';
 
 export default {
   components: {
     EntryGroupHeader,
     EntryRow,
     NewEntry
+  },
+  created() {
+    store.dispatch('bindTracks');
+  },
+  computed: {
+    ...mapState({
+      tracks: state => state.track
+    }),
+    ...mapGetters({
+      allTracks: 'allTracks'
+        }
+    )
+  },
+  methods: {
+    test(){
+      const time = this.allTracks[0].startTime;
+      // const date = TimeStamp(time).toDate();
+      console.log(time.toDate());
+    }
   },
   data() {
     return {

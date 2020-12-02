@@ -5,9 +5,7 @@ module.exports = {
     },
     extends: [
         'plugin:vue/vue3-recommended',
-        '@vue/airbnb',
     ],
     rules: {
-        quotes: "single"
     }
 }
