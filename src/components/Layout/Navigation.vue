@@ -30,6 +30,14 @@
           Todo
         </border-less-btn>
         <div class="divider"></div>
+        <border-less-btn :route="'reports'">
+          <template v-slot:icon>
+            <icon-base>
+              <icon-client />
+            </icon-base>
+          </template>
+          Reports
+        </border-less-btn>
         <border-less-btn :route="'clients'">
           <template v-slot:icon>
             <icon-base>
